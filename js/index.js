@@ -35,7 +35,9 @@ if (!!hacker1.length && !!hacker2.length){
   console.log(`${n}`);
 //3.3
 let myArray = [hacker1,hacker2];
-myArray.sort((a,b) => a.localeCompare(b));
+// myArray.sort((a,b) => a.localeCompare(b));
+myArray.sort();
+
 
 if (!!hacker1.length && !!hacker2.length){
   if (hacker1===hacker2){
@@ -49,3 +51,17 @@ if (!!hacker1.length && !!hacker2.length){
   }} else {
     console.log(`You know that names are strings, right?`)
 } ;
+
+let myArray2 = [hacker1, hacker2];
+
+// for (let i=0; i<myArray2.length; i++){
+//   myArray2[i] = myArray2[i].toLowerCase().split('').sort().join('');
+// };
+
+// console.log({scrambledname: myArray2})
+
+myArray2.forEach((name, i) => {
+  myArray2[i] = name.toLowerCase().split('').sort().join('')
+})
+
+console.log({scrambledname: myArray2})
